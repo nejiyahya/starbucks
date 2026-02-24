@@ -1,0 +1,84 @@
+[
+	{
+		"name": "Cup Size",
+		"enabled": true,
+		"functional": "change_layout",
+		"icon": "assets/images/icon_size.png",
+		"rows":1,
+		"column":3,
+		"assets":
+		[
+			{
+				"image":"assets/images/tall/tall_icon.png",
+				"label":"tall",
+				"layout":"assets/images/tall"
+			},
+			{
+				"image":"assets/images/grande/grande_icon.png",
+				"label":"grande",
+				"layout":"assets/images/grande"
+			}
+		]
+	},
+	{
+		"name":"Patterns",
+		"enabled":true,
+		"functional": "sticker",
+		"rows":1,
+		"column":3,
+		"list_color": [
+			"#00693a",
+			"#000000",
+			"#81542c",
+			"#eed26b",
+			"#f8a09f"
+		],
+		"icon":"assets/images/icon_pattern.png",
+		"assets":
+		[
+			"assets/images/pattern/pattern_1.svg",
+			"assets/images/pattern/pattern_2.svg",
+			"assets/images/pattern/pattern_3.svg",
+			"assets/images/pattern/pattern_4.svg",
+			"assets/images/pattern/pattern_5.svg",
+			"assets/images/pattern/pattern_6.svg",
+			"assets/images/pattern/pattern_7.svg",
+			"assets/images/pattern/pattern_8.svg",
+			"assets/images/pattern/pattern_9.svg",
+			"assets/images/pattern/pattern_10.svg",
+			"assets/images/pattern/pattern_11.svg",
+			"assets/images/pattern/pattern_12.svg"
+		]
+	},
+	{
+		"name":"Stickers",
+		"enabled":true,
+		"functional": "sticker",
+		"rows":1,
+		"column":4,
+		"icon":"assets/images/icon_sticker.png",
+		"assets":
+		[
+			"assets/images/sticker/sticker_coffee_1.png",
+			"assets/images/sticker/sticker_coffee_2.png",
+			"assets/images/sticker/sticker_coffee_3.png",
+			"assets/images/sticker/sticker_coffee_4.png",
+			"assets/images/sticker/sticker_coffee_5.png",
+			"assets/images/sticker/sticker_coffee_6.png",
+			"assets/images/sticker/sticker_coffee_7.png",
+			"assets/images/sticker/sticker_text_1.png",
+			"assets/images/sticker/sticker_text_2.png",
+			"assets/images/sticker/sticker_text_3.png",
+			"assets/images/sticker/sticker_text_4.png",
+			"assets/images/sticker/sticker_text_5.png",
+			"assets/images/sticker/sticker_text_6.png",
+			"assets/images/sticker/sticker_ornament_1.png",
+			"assets/images/sticker/sticker_ornament_2.png",
+			"assets/images/sticker/sticker_ornament_3.png",
+			"assets/images/sticker/sticker_ornament_4.png",
+			"assets/images/sticker/sticker_ornament_5.png",
+			"assets/images/sticker/sticker_ornament_6.png"
+
+		]
+	}
+]

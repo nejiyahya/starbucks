@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<title>Starbuck Gamification</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="description" content="Starbuck Gamification">
+	<meta name="keywords" content="">
+	<meta name="theme-color" content="#00693a">
+
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/icon/favicon.ico" />
+	<link rel="apple-touch-icon" href="assets/images/icon/touch-icon-iphone.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/images/icon/touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/images/icon/touch-icon-iphone4.png" />
+
+	<meta property='og:url' content=''>
+	<meta property='og:title' content=''>
+	<meta property='og:description' content=''>
+	<meta property='og:site_name' content=''>
+	<meta property='og:image' content=''>
+
+	<link rel='stylesheet' type='text/css' href='assets/css/critical.min.css'>
+	<link rel='stylesheet' type='text/css' href='assets/css/app.min.css'>
+	<link rel='stylesheet' type='text/css' href='assets/css/game.css'>
+</head>
+<body>
+	<div id="loading">
+		<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+	</div>
+
+	<!-- SITE BLOCK -->
+	<div id="app" class="site u-images u-images--cover" style="background-image: url('assets/images/starbucks-cover.jpg')">
+
+		<!-- HEADER BLOCK -->
+		<header class="header">
+			<!-- MENU COMPONENT -->
+			<div class="menu">
+				<div class="container u-flexbox h-100">
+
+					<a href="index.html" class="menu__brand ml-auto">
+						<img src="assets/images/icon/starbucks-logomark.png" alt="">
+					</a>
+
+				</div>
+			</div>
+		</header>
+
+		<!-- MAIN BLOCk -->
+		<div class="main">
+			<!-- HERO COMPONENT -->
+			<div class="hero-content">
+				<!-- GENERATE COMPONENT -->
+				<div class="hero-content__generate" id="container">
+					<div class="cup_wrapper animated zoomIn" id="layoutStage">
+						<img src="assets/images/tall/left.png" alt="" class="dash_left" data-html2canvas-ignore="true">
+						<img src="assets/images/tall/right.png" alt="" class="dash_right" data-html2canvas-ignore="true">
+						<img src="assets/images/tall/pola_cup.png" alt="" class="layout" data-html2canvas-ignore="true">
+						<div id="stage"></div>
+						<img src="assets/images/logo.png" alt="" class="logo_starbucks">
+					</div>
+					<div id="cupResult"></div>
+				</div>
+			</div>
+		</div>
+		<div id="properties" class="animated slideInUp">
+			<div id="btnAction">
+				<a href="" id="delete">
+					<img src="assets/images/icon/delete.png" alt="">
+					<span>Delete</span>
+				</a>
+				<a href="" id="preview">
+					<img src="assets/images/icon/preview.png" alt="">
+					<span>Preview</span>
+				</a>
+				<a href="">
+					<img src="assets/images/icon/back.png" alt="">
+					<span>Back</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="modalPreview">
+		<div>
+			<label>Preview</label>
+			<button class="btnClose"></button>
+			<div class="modalCup">
+				<img src="assets/images/tall/cup.png" alt="" class="cup">
+				<div id="modalStage">
+					<div></div>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+	<script src='public/jquery/jquery.min.js'></script>
+	<script src='public/bootstrap/bootstrap.bundle.min.js'></script>
+	<script src="public/interact.min.js" type="text/javascript"></script>
+	<script src="public/slick/slick.min.js"></script>
+	<script src="public/html2canvas.js" type="text/javascript"></script>
+	<script src="public/html2canvas.svg.js" type="text/javascript"></script>
+
+	<script src='assets/js/app.min.js'></script>
+	<script src="assets/js/Properties.js" type="text/javascript"></script>
+	<script src="assets/js/Property.js" type="text/javascript"></script>
+	<script src="assets/js/Element.js" type="text/javascript"></script>
+	<script src="assets/js/Layout.js" type="text/javascript"></script>
+
+
+	<script type="text/javascript">
+		var properties;
+		function init(data){
+			properties = new Properties({
+				"data":data,
+				"layout":"assets/images/tall"
+			});
+
+			properties.init();
+		}
+
+		$(document).ready(function(){
+			var rawData = new XMLHttpRequest();
+			rawData.open("GET", "game.json", false);
+			rawData.onreadystatechange = function ()
+			{
+				if(rawData.readyState === 4)
+				{
+					if(rawData.status === 200 || rawData.status == 0)
+					{
+						var data = rawData.responseText;
+						init(JSON.parse(data));
+					}
+				}
+			}
+			rawData.send(null);
+		});
+	</script>
+</body>
+</html>

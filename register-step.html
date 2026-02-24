@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+
+	
+		<title>Starbuck Gamification</title>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Starbuck Gamification">
+        <meta name="keywords" content="">
+        <meta name="theme-color" content="#00693a">
+
+	    <link rel="shortcut icon" type="image/x-icon" href="assets/images/icon/favicon.ico" />
+		<link rel="apple-touch-icon" href="assets/images/icon/touch-icon-iphone.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="assets/images/icon/touch-icon-ipad.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="assets/images/icon/touch-icon-iphone4.png" />
+
+
+        
+
+        
+
+        <meta property='og:url' content=''>
+		<meta property='og:title' content=''>
+		<meta property='og:description' content=''>
+		<meta property='og:site_name' content=''>
+		<meta property='og:image' content=''>
+
+		<link rel='stylesheet' type='text/css' href='assets/css/critical.min.css'>
+
+		
+
+		
+		
+		<link rel='stylesheet' type='text/css' href='assets/css/app.min.css'>
+	
+
+</head>
+<body>
+	
+	<!-- SITE BLOCK -->
+	<div id="app" class="site u-images u-images--cover" style="background-image: url('assets/images/starbucks-cover.jpg')">
+		
+
+	
+
+		<!-- HEADER BLOCK -->
+<header class="header">
+	<!-- MENU COMPONENT -->
+	<div class="menu">
+		<div class="container u-flexbox h-100">
+			
+			<a href="http://localhost:1234/" class="menu__brand ml-auto">
+				<img src="assets/images/icon/starbucks-logomark.png" alt="">
+			</a>
+			
+		</div>
+	</div>
+</header>
+
+	
+
+	
+	
+
+	<!-- MAIN BLOCk -->
+	<div class="main main--filling">
+		<div class="container text-center u-figure">
+			
+			<!-- HERO COMPONENT -->
+			<div class="hero-content u-images">
+				
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+	
+
+		<!-- FOOTER BLOCK -->
+<footer class="footer">
+	<div class="container text-center">
+		<div class="footer__copy">
+			&copy; 2019. <a href="http://www.starbucks.co.id/" target="_blank">Starbucks Indonesia</a>
+		</div>
+	</div>
+</footer>
+
+	
+
+
+	
+	
+	<!-- MODAL COMPONENT -->
+	<div id="onPopup" class="modal u-animate u-bounce--in" aria-hidden="false">
+		<div class="modal-dialog u-flexbox u-title">
+			<div class="modal-content text-center u-images" style="background-image:url('assets/images/csac.jpg');background-color:#00693a;">
+				<div class="modal-header mb-6">
+					<h3 class="text-warning u-font u-font--large mb-2">Yay,</h3>
+					<h2 class="text-white mb-0">
+						You're one step closer to get <br>the reward!
+					</h2>
+				</div>
+				<form action="done.html" method="get" name="register_form" id="register_form" class="modal-body">
+					<input type="hidden" name="" id="">
+					<div class="form-group">
+						<input type="text" name="" id="" class="form-control" placeholder="Name">
+						<span class="error u-flexbox">
+							<i class="fas fa-exclamation-circle"></i>
+						</span>
+					</div>
+					<div class="form-group">
+						<input type="email" name="" id="" class="form-control" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<input type="number" name="" id="" class="form-control" placeholder="Phone Number" pattern="[0-9]*">
+					</div>
+					<div class="mt-6">
+						<input type="submit" name="" id="" class="btn btn-warning text-primary u-animate u-sloppy--in u-delay--half" value="GET MY REWARDS">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+	
+	
+		
+	
+
+
+	</div>
+
+	
+	
+
+		<script src='public/jquery/jquery.min.js'></script>
+		<script src='public/bootstrap/bootstrap.bundle.min.js'></script>
+
+		
+	
+	<script>
+		$('#onPopup').modal('show');
+		$('#onPopup').on('shown.bs.modal', function () {
+			$('input[type="text"]').trigger('focus')
+		});
+	</script>
+
+
+
+		<script src='assets/js/app.min.js'></script>
+
+	
+
+</body>
+</html>
